@@ -45,6 +45,7 @@
             line-height: 24.2px;
             text-align: left;
             text-transform: uppercase;
+            cursor: pointer;
         }
 
         .navbar ul {
@@ -178,6 +179,26 @@
             margin-top: 120px;
             margin-bottom: 120px;
             text-align: center;
+            position: relative;
+            padding-left: 10px;
+        }
+
+        #testimonial .containers {
+            width: 80%;
+            overflow: hidden;
+        }
+
+        .testimoniales-inner {
+            display: flex;
+            gap: 15px;
+        }
+
+        .testimoniales {
+            flex: 0 0 32%;
+            text-align: center;
+            border-radius: 20px;
+            background: #F6F6F6;
+            padding: 32px;
         }
 
         .testimoniales-wrapper h2 {
@@ -187,21 +208,6 @@
             line-height: 48px;
             text-align: center;
             margin-bottom: 38.65px;
-        }
-
-        .testimoniales-inner {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            position: relative;
-        }
-
-        .testimoniales {
-            border-radius: 20px;
-            background: #F6F6F6;
-            text-align: center;
-            padding: 32px;
         }
 
         .testimoniales img {
@@ -229,15 +235,17 @@
         }
 
         .arrow-left {
-            left: -20px;
+            left: 0px;
             position: absolute;
-            top: 45%;
+            top: 60%;
+            cursor: pointer;
         }
 
         .arrow-right {
             position: absolute;
-            right: 0;
-            top: 45%;
+            right: 0px;
+            top: 60%;
+            cursor: pointer;
         }
 
         /* media Query */
@@ -250,9 +258,19 @@
             .hero-content h1 {
                 font-size: 40px;
             }
+
+            #testimonial .containers {
+                width: 100%;
+            }
         }
 
         @media (max-width:768px) {
+            .navbar.Highlight {
+                display: block;
+                border-radius: 20px;
+                background: #F6F6F6;
+            }
+
             .header {
                 margin-top: 48px;
                 position: relative;
@@ -261,8 +279,6 @@
             .header .logo {
                 font-size: 14px;
                 line-height: 16.94px;
-
-
             }
 
             .containers {
@@ -333,6 +349,7 @@
 
             .testimoniales-inner {
                 display: block;
+                transform: translateX(0%) !important;
             }
 
             .testimoniales {
@@ -353,11 +370,10 @@
             }
 
             nav.navbar {
-                background-color: grey;
                 width: 100%;
                 position: absolute;
                 top: 40px;
-                height: 500px;
+                height: 270px;
             }
 
             .navbar ul {
@@ -366,27 +382,33 @@
             }
 
             .navbar ul li>a {
-                color: white;
+                color: black;
             }
 
             .navbar ul li {
                 margin-right: 0 !important;
-                padding: 40px;
+                padding: 20px;
+            }
+
+            .testimoniales.repeat-scroll,
+            .arrow-left,
+            .arrow-right {
+                display: none;
             }
         }
     </style>
 </head>
 
 <body>
-    <section id="header">
+    <section id="header section1">
         <div class="containers">
             <header class="header">
                 <div class="logo">Digital Agency</div>
                 <nav class="navbar">
                     <ul>
                         <li><a href="#">home</a></li>
-                        <li><a href="#">about</a></li>
-                        <li><a href="#">testimonials</a></li>
+                        <li><a href="#section-about">about</a></li>
+                        <li><a href="#testimonial">testimonials</a></li>
                         <li><a href="#">contact</a></li>
                     </ul>
                 </nav>
@@ -397,7 +419,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="section2">
         <div class="containers">
             <div class="hero-wrapper">
                 <div class="hero-content">
@@ -415,7 +437,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="section3">
         <div class="containers">
             <div class="icon-wrapper">
                 <p>Trusted by 4,000+ companies</p>
@@ -437,7 +459,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="section-about">
         <div class="containers">
             <div class="branding-wrapper">
                 <div class="brand-img">
@@ -460,7 +482,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="testimonial">
         <div class="containers">
             <div class="testimoniales-wrapper">
                 <p>TESTIMONIALS</p>
@@ -493,23 +515,68 @@
                             ullamcorper scelerisque mi, in malesuada felis malesuada vel.
                         </p>
                     </div>
-                    <div class="slide-arrow">
-                        <div class="arrow-left">
-                            <img src="images/Button - Go to next.png" alt="Arrow Icon">
-                        </div>
-                        <div class="arrow-right">
-                            <img src="images/Button - Go to next (1).png" alt="Arrow Icon">
-                        </div>
+                    <div class="testimoniales repeat-scroll">
+                        <img src="images/test03.png" alt="Icon" />
+                        <h4>Mark Smith</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                            ullamcorper scelerisque mi, in malesuada felis malesuada vel.
+                        </p>
                     </div>
+                    <div class="testimoniales repeat-scroll">
+                        <img src="images/test02.png" alt="Icon" />
+                        <h4>Vera Duncan</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                            ullamcorper scelerisque mi, in malesuada felis malesuada vel.
+                        </p>
+                    </div>
+                    <div class="testimoniales repeat-scroll">
+                        <img src="images/test01.png" alt="Icon" />
+                        <h4>Andrew Rathore</h4>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                            ullamcorper scelerisque mi, in malesuada felis malesuada vel.
+                        </p>
+                    </div>
+
+
+                </div>
+                <div class="arrow-left" onclick="moveSlide(-1)">
+                    <img src="images/Button - Go to next.png" alt="Arrow Icon">
+                </div>
+                <div class="arrow-right" onclick="moveSlide(1)">
+                    <img src="images/Button - Go to next (1).png" alt="Arrow Icon">
                 </div>
             </div>
+
         </div>
     </section>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
+
+        let currentIndex = 0;
+        const testimonials = document.querySelectorAll(".testimoniales");
+
+        function moveSlide(n) {
+            currentIndex += n * 3;
+
+            if (currentIndex < 0) {
+                currentIndex = testimonials.length - 3;
+            } else if (currentIndex >= testimonials.length) {
+                currentIndex = 0;
+            }
+
+            const container = document.querySelector(".testimoniales-inner");
+            const offset = -currentIndex * 33.33;
+            container.style.transform = `translateX(${offset}%)`;
+        }
+
+
         $(document).ready(function () {
             $(".three-line").click(function () {
-                $(".navbar").toggle();
+                $(".navbar").toggleClass('Highlight');
             });
         });
     </script>
